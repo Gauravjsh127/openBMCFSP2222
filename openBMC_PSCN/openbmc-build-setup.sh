@@ -233,6 +233,7 @@ elif [[ "${distro}" == boesedev ]]; then
   ENV LANG en_US.UTF-8
   ENV LANGUAGE en_US:en
   ENV LC_ALL en_US.UTF-8
+  RUN yum-config-manager --add-repo http://mirror.centos.org/centos/7/os/x86_64/
   RUN yum install -y --nogpgcheck yum-plugin-ovl
   RUN yum install -y --nogpgcheck texinfo
   RUN yum install -y --nogpgcheck chrpath
